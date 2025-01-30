@@ -1,0 +1,117 @@
+/* Fonts and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #CCDBDC;
+    color: #007EA7;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main aside"
+      "footer footer";
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+    min-height: 100vh;
+  }
+  
+  /* Header Styling */
+  header {
+    grid-area: header;
+    background-color: #003249;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    grid-area: nav;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #007EA7;
+    padding: 10px;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #9AD1D4;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  main {
+    grid-area: main;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Sidebar Styling */
+  aside {
+    grid-area: aside;
+    background-color: #E4F5F2;
+    padding: 15px;
+    border-radius: 8px;
+    color: #003249;
+  }
+  
+  /* Styled List */
+  ul {
+    list-style: disc inside;
+  }
+  
+  /* Footer */
+  footer {
+    grid-area: footer;
+    background-color: #003249;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Responsive Flexbox for Navigation */
+  @media (max-width: 768px) {
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    body {
+      grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  }
+  
